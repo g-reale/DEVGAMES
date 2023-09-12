@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://1rebwfaj2kvb"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5mxxd"]
+load_path = "res://.godot/imported/skyscraper.png-42d512b3af65a0342ab3be4b3bf3a09b.ctex"
+
+[node name="Skyscraper" type="Sprite2D"]
+top_level = true
+texture_filter = 1
+texture = SubResource("CompressedTexture2D_5mxxd")

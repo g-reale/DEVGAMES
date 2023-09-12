@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bksgo7qd0ovex"]
+
+[ext_resource type="Script" path="res://world/world.gd" id="1_q4ib4"]
+[ext_resource type="PackedScene" uid="uid://1rebwfaj2kvb" path="res://skyscraper/skyscraper.tscn" id="2_0rudj"]
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_q4ib4")
+
+[node name="Skyscraper" parent="." instance=ExtResource("2_0rudj")]
+position = Vector2(158, 40)
+scale = Vector2(2, 2)
+
+[node name="Answer" type="Label" parent="."]
+offset_left = 148.0
+offset_top = 51.0
+offset_right = 236.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 20
+horizontal_alignment = 1
