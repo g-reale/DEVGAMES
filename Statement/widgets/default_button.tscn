@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://k5quaqni0oai"]
+
+[ext_resource type="FontVariation" uid="uid://ut0tf07kump6" path="res://fonts/VT323/VT.tres" id="1_oiecl"]
+
+[node name="Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("1_oiecl")
+text = "run"
+flat = true
+
+[node name="defaullt_button" type="ReferenceRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+border_color = Color(1, 1, 1, 1)

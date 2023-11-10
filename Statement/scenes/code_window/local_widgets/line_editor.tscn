@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl0flso8i5lnr"]
+
+[ext_resource type="FontVariation" uid="uid://ut0tf07kump6" path="res://fonts/VT323/VT.tres" id="1_7vw26"]
+[ext_resource type="Script" path="res://scenes/code_window/local_widgets/line_editor.gd" id="2_0bf7m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qluo3"]
+
+[node name="line_editor" type="LineEdit"]
+offset_right = 67.0625
+offset_bottom = 31.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/minimum_character_width = 30
+theme_override_constants/caret_width = 5
+theme_override_fonts/font = ExtResource("1_7vw26")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qluo3")
+text = "eps"
+max_length = 30
+deselect_on_focus_loss_enabled = false
+flat = true
+caret_blink_interval = 0.5
+script = ExtResource("2_0bf7m")
+
+[connection signal="text_changed" from="." to="." method="_on_text_changed"]

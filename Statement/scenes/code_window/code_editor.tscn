@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsahc43ahpxua"]
+
+[ext_resource type="PackedScene" uid="uid://dt8vg7hnwhhyd" path="res://widgets/default_label.tscn" id="1_5hgyf"]
+[ext_resource type="PackedScene" uid="uid://cl0flso8i5lnr" path="res://scenes/code_window/local_widgets/line_editor.tscn" id="2_djaqo"]
+[ext_resource type="PackedScene" uid="uid://k5quaqni0oai" path="res://widgets/default_button.tscn" id="3_hriu0"]
+[ext_resource type="Script" path="res://scenes/code_window/run_button.gd" id="4_5j18q"]
+
+[node name="code_editor" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="a" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_5hgyf")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "a > "
+
+[node name="b" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_5hgyf")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "b > "
+
+[node name="c" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_5hgyf")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "c > "
+
+[node name="d" parent="HBoxContainer/VBoxContainer" instance=ExtResource("1_5hgyf")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+text = "d > "
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="a" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_djaqo")]
+layout_mode = 2
+
+[node name="b" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_djaqo")]
+layout_mode = 2
+
+[node name="c" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_djaqo")]
+layout_mode = 2
+
+[node name="d" parent="HBoxContainer/VBoxContainer2" instance=ExtResource("2_djaqo")]
+layout_mode = 2
+
+[node name="run_button" parent="." instance=ExtResource("3_hriu0")]
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 0, 0, 1)
+script = ExtResource("4_5j18q")
+
+[connection signal="accepted_program" from="HBoxContainer/VBoxContainer2/a" to="run_button" method="_on_accepted_program"]
+[connection signal="regected_program" from="HBoxContainer/VBoxContainer2/a" to="run_button" method="_on_regected_program"]
+[connection signal="accepted_program" from="HBoxContainer/VBoxContainer2/b" to="run_button" method="_on_accepted_program"]
+[connection signal="regected_program" from="HBoxContainer/VBoxContainer2/b" to="run_button" method="_on_regected_program"]
+[connection signal="accepted_program" from="HBoxContainer/VBoxContainer2/c" to="run_button" method="_on_accepted_program"]
+[connection signal="regected_program" from="HBoxContainer/VBoxContainer2/c" to="run_button" method="_on_regected_program"]
+[connection signal="accepted_program" from="HBoxContainer/VBoxContainer2/d" to="run_button" method="_on_accepted_program"]
+[connection signal="regected_program" from="HBoxContainer/VBoxContainer2/d" to="run_button" method="_on_regected_program"]

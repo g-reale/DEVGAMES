@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhwjnq8wdg8go"]
+
+[ext_resource type="PackedScene" uid="uid://dei4qps33ov26" path="res://widgets/backgroud.tscn" id="1_hnv3m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgroud" parent="." instance=ExtResource("1_hnv3m")]
+layout_mode = 0
+anchors_preset = 0

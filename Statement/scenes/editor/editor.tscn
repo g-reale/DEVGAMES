@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd81ggnlufqso"]
+
+[ext_resource type="PackedScene" uid="uid://dei4qps33ov26" path="res://widgets/backgroud.tscn" id="1_0kurt"]
+[ext_resource type="PackedScene" uid="uid://dsahc43ahpxua" path="res://scenes/code_window/code_editor.tscn" id="2_22l2e"]
+[ext_resource type="PackedScene" uid="uid://4px80qd8bbnh" path="res://scenes/cpu/cpu_block.tscn" id="3_ifbtb"]
+
+[node name="editor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backgroud" parent="." instance=ExtResource("1_0kurt")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Backgroud"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Backgroud/MarginContainer"]
+layout_mode = 2
+border_color = Color(1, 1, 1, 1)
+border_width = 3.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Backgroud/MarginContainer/ReferenceRect"]
+layout_mode = 2
+offset_right = 1132.0
+offset_bottom = 628.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Backgroud/MarginContainer/ReferenceRect/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="code_editor" parent="Backgroud/MarginContainer/ReferenceRect/MarginContainer/HBoxContainer" instance=ExtResource("2_22l2e")]
+layout_mode = 2
+
+[node name="CPU Block" parent="Backgroud/MarginContainer/ReferenceRect/MarginContainer/HBoxContainer" instance=ExtResource("3_ifbtb")]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0

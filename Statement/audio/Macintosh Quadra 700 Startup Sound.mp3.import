@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b6sdqft5wsqtf"
+path="res://.godot/imported/Macintosh Quadra 700 Startup Sound.mp3-e29b9cd870a635e1067aaea59102b8cf.mp3str"
+
+[deps]
+
+source_file="res://audio/Macintosh Quadra 700 Startup Sound.mp3"
+dest_files=["res://.godot/imported/Macintosh Quadra 700 Startup Sound.mp3-e29b9cd870a635e1067aaea59102b8cf.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt8vg7hnwhhyd"]
+
+[ext_resource type="FontVariation" uid="uid://ut0tf07kump6" path="res://fonts/VT323/VT.tres" id="1_27bmr"]
+
+[node name="Title" type="Label"]
+theme_override_fonts/font = ExtResource("1_27bmr")
+text = "     _______ __        __                            __  _ 
+   _/_/ ___// /_____ _/ /____  ____ ___  ___  ____  / /_| |
+  / / \\__ \\/ __/ __ `/ __/ _ \\/ __ `__ \\/ _ \\/ __ \\/ __// /
+ / / ___/ / /_/ /_/ / /_/  __/ / / / / /  __/ / / / /_ / / 
+/ / /____/\\__/\\__,_/\\__/\\___/_/ /_/ /_/\\___/_/ /_/\\__//_/  
+|_|                                                 /_/    "
+horizontal_alignment = 1
+vertical_alignment = 1
